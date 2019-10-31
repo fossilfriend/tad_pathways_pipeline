@@ -24,6 +24,8 @@ venn_output_file <- file.path("results", paste0("venn_", trait, ".tiff"))
 # Read in Data
 evidence_genes <- readr::read_csv(evidence_file)
 
+print(head(evidence_genes))
+
 # Prepare for VennDiagram input
 tad_genes <- c()
 eqtl_genes <- c()
@@ -41,7 +43,7 @@ for (gene in 1:nrow(evidence_genes)) {
 }
 
 venn_list <- list("GWAS" = gwas_genes, "TAD Pathway" = tad_genes)
-
+print(venn_list)
 # Output Venn Diagram
 VennDiagram::venn.diagram(x = venn_list,
                           filename = venn_output_file,

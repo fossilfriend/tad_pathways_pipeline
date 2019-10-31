@@ -9,17 +9,17 @@
 
 mirror <- "http://cran.us.r-project.org"
 
-install.packages("VennDiagram", repos = mirror)
-install.packages("WebGestaltR", repos = mirror)
+#install.packages("VennDiagram", repos = mirror)
+#install.packages("WebGestaltR", repos = mirror)
 
-library("readr")
-library("VennDiagram")
-library("dplyr")
-library("tidyr")
-library("gridExtra")
-library("optparse")
-library("WebGestaltR")
-library("biomaRt")
+install.packages("readr")
+install.packages("VennDiagram")
+install.packages("dplyr")
+install.packages("tidyr")
+install.packages("gridExtra")
+install.packages("optparse")
+install.packages("WebGestaltR")
+# install.packages("biomaRt")
 
 sink("sessionInfo.txt")
 sessionInfo()

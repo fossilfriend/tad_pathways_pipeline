@@ -26,6 +26,8 @@ import os
 import argparse
 import pandas as pd
 import csv
+import sys
+
 
 # Load Command Arguments
 parser = argparse.ArgumentParser()
@@ -64,8 +66,9 @@ def buildTADkey(gwas_snp):
     i.e. [(Chromosome, TAD_ID:TAD_Start-TAD_End)
     """
 
+    #chrom = gwas_snp['chrom']
     chrom = gwas_snp['chrom'].replace('chr', '') 
-
+    
     start = int(gwas_snp['TADStart'])
     end = int(gwas_snp['TADEnd'])
     tad_num = int(gwas_snp['TADidx'])

@@ -28,6 +28,7 @@ a .csv evidence file (two columns: [gene, type of evidence])
 
 import os
 import argparse
+import sys
 import pandas as pd
 
 # Load Command Arguments
@@ -72,6 +73,7 @@ for gene in gwas_genes:
 all_genes = set(full_gwas_genes + pathway_genes)
 all_assignments = []
 
+print(all_genes)
 # Logic to determine genic evidence
 for gene in all_genes:
     if gene in full_gwas_genes:
@@ -79,6 +81,7 @@ for gene in all_genes:
         if gene in pathway_genes:
             assignment = '{}_tad'.format(assignment)
     else:
+        print(gene, file=sys.stderr)
         assignment = 'tad'
     all_assignments.append(assignment)
 
