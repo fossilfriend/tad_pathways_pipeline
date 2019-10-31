@@ -1,3 +1,5 @@
+# NOTE: This README is not accurate for this fork of the project.  To be updated
+
 # TAD_Pathways
 
 ## Leveraging TADs to identify candidate genes at GWAS signals
